@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="rw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kwa Mugisha - Ihahire neza kuri macye. Shop well at affordable prices. Fresh groceries in Kimironko, Kigali, Rwanda."
+    />
+    <meta
+      name="keywords"
+      content="grocery, Kigali, Kimironko, fresh produce, affordable prices, Kwa Mugisha, Rwanda, supermarket"
+    />
+    <title>
+      Kwa Mugisha - Ihahire neza kuri macye | Fresh Groceries in Kigali
+    </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="font-sans">
+    <!-- Navigation Bar -->
+    <nav
+      class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300"
+    >
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center shadow-md"
+            >
+              <i class="fas fa-shopping-basket text-white text-xl"></i>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold text-green-700">Kwa Mugisha</h1>
+              <p
+                class="text-xs text-gray-600 font-medium"
+                data-rw="Ihahire neza kuri macye"
+                data-en="Shop well at affordable prices"
+              >
+                Ihahire neza kuri macye
+              </p>
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="nav-link active">
+              <span data-rw="Ahabanza" data-en="Home">Ahabanza</span>
+            </a>
+            <a href="#" class="nav-link">
+              <span data-rw="Ibyacu" data-en="About">Ibyacu</span>
+            </a>
+            <a href="products.html" class="nav-link">
+              <span data-rw="Ibicuruzwa" data-en="Products">Ibicuruzwa</span>
+            </a>
+            <a href="#" class="nav-link">
+              <span data-rw="Tuvugishe" data-en="Contact">Tuvugishe</span>
+            </a>
+
+            <!-- Language Switcher -->
+            <div class="flex items-center bg-gray-100 rounded-full p-1">
+              <button
+                id="lang-rw"
+                class="lang-btn active px-3 py-1 rounded-full text-sm font-semibold transition-all"
+              >
+                RW
+              </button>
+              <button
+                id="lang-en"
+                class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all"
+              >
+                EN
+              </button>
+            </div>
+          </div>
+
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-gray-700 focus:outline-none"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t pt-4">
+          <a href="index.html" class="block py-3 text-green-600 font-semibold">
+            <span data-rw="Ahabanza" data-en="Home">Ahabanza</span>
+          </a>
+          <a
+            href="about.html"
+            class="block py-3 text-gray-700 hover:text-green-600"
+          >
+            <span data-rw="Ibyacu" data-en="About">Ibyacu</span>
+          </a>
+          <a
+            href="products.html"
+            class="block py-3 text-gray-700 hover:text-green-600"
+          >
+            <span data-rw="Ibicuruzwa" data-en="Products">Ibicuruzwa</span>
+          </a>
+          <a
+            href="contact.html"
+            class="block py-3 text-gray-700 hover:text-green-600"
+          >
+            <span data-rw="Tuvugishe" data-en="Contact">Tuvugishe</span>
+          </a>
+
+          <!-- Mobile Language Switcher -->
+          <div class="flex items-center space-x-2 mt-4">
+            <span
+              class="text-sm text-gray-600"
+              data-rw="Ururimi:"
+              data-en="Language:"
+              >Ururimi:</span
+            >
+            <button
+              class="mobile-lang-btn active px-3 py-1 bg-green-600 text-white rounded-full text-sm"
+              data-lang="rw"
+            >
+              RW
+            </button>
+            <button
+              class="mobile-lang-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm"
+              data-lang="en"
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Enhanced Design -->
+    <section class="hero-section pt-20">
+      <div class="hero-overlay">
+        <div class="container mx-auto px-4 py-32 md:py-40">
+          <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block mb-6">
+              <span
+                class="bg-yellow-400 text-green-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                data-rw="🎉 Turi kumwe nawe!"
+                data-en="🎉 We're here for you!"
+                >🎉 Turi kumwe nawe!</span
+              >
+            </div>
+            <h2
+              class="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in leading-tight"
+            >
+              Kwa Mugisha
+            </h2>
+            <p
+              class="text-3xl md:text-4xl text-yellow-300 mb-4 font-bold"
+              data-rw="Ihahire neza kuri macye"
+              data-en="Shop well at affordable prices"
+            >
+              Ihahire neza kuri macye
+            </p>
+            <p
+              class="text-xl md:text-2xl text-white mb-10 opacity-90"
+              data-rw="Ibicuruzwa bishya, byiza kandi ku giciro cyiza"
+              data-en="Fresh, quality products at great prices"
+            >
+              Ibicuruzwa bishya, byiza kandi ku giciro cyiza
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="products.html"
+                class="btn-primary inline-flex items-center justify-center"
+              >
+                <i class="fas fa-shopping-cart mr-2"></i>
+                <span data-rw="Reba Ibicuruzwa" data-en="View Products"
+                  >Reba Ibicuruzwa</span
+                >
+              </a>
+              <a
+                href="contact.html"
+                class="btn-secondary inline-flex items-center justify-center"
+              >
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span data-rw="Tugane" data-en="Visit Us">Tugane</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative Wave -->
+      <div class="wave-bottom"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gradient-to-br from-green-50 to-blue-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div
+            class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
+          >
+            <div class="text-4xl font-bold text-green-600 mb-2">5+</div>
+            <p
+              class="text-gray-600 font-medium"
+              data-rw="Imyaka mu bucuruzi"
+              data-en="Years in Business"
+            >
+              Imyaka mu bucuruzi
+            </p>
+          </div>
+          <div
+            class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
+          >
+            <div class="text-4xl font-bold text-green-600 mb-2">1000+</div>
+            <p
+              class="text-gray-600 font-medium"
+              data-rw="Abakiriya bizeye"
+              data-en="Happy Customers"
+            >
+              Abakiriya bizeye
+            </p>
+          </div>
+          <div
+            class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
+          >
+            <div class="text-4xl font-bold text-green-600 mb-2">200+</div>
+            <p
+              class="text-gray-600 font-medium"
+              data-rw="Ibicuruzwa"
+              data-en="Products"
+            >
+              Ibicuruzwa
+            </p>
+          </div>
+          <div
+            class="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
+          >
+            <div class="text-4xl font-bold text-green-600 mb-2">7-9</div>
+            <p
+              class="text-gray-600 font-medium"
+              data-rw="Amasaha buri munsi"
+              data-en="Hours Daily"
+            >
+              Amasaha buri munsi
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <span
+            class="text-green-600 font-semibold text-sm uppercase tracking-wide"
+            data-rw="Murakaza neza"
+            data-en="Welcome"
+            >Murakaza neza</span
+          >
+          <h3
+            class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 mt-2"
+            data-rw="Turi hano kubafasha"
+            data-en="We're Here to Help You"
+          >
+            Turi hano kubafasha
+          </h3>
+          <p
+            class="text-lg md:text-xl text-gray-600 leading-relaxed"
+            data-rw="Duhagurukira kubahiriza abakiriya bacu ibicuruzwa byiza, bishya kandi ku giciro cyiza. Turi ahantu heza i Kimironko kwa Mushimire, Kigali. Turi kumwe nawe buri munsi, tuzanire umuryango wawe ibikenerwa byose."
+            data-en="We are committed to providing our customers with quality, fresh products at affordable prices. Located in the heart of Kimironko kwa Mushimire, Kigali, we're with you every day, bringing everything your family needs."
+          >
+            Duhagurukira kubahiriza abakiriya bacu ibicuruzwa byiza, bishya
+            kandi ku giciro cyiza. Turi ahantu heza i Kimironko kwa Mushimire,
+            Kigali. Turi kumwe nawe buri munsi, tuzanire umuryango wawe
+            ibikenerwa byose.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section with Enhanced Cards -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-green-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <span
+            class="text-green-600 font-semibold text-sm uppercase tracking-wide"
+            data-rw="Inyungu zacu"
+            data-en="Our Benefits"
+            >Inyungu zacu</span
+          >
+          <h3
+            class="text-4xl md:text-5xl font-bold text-gray-800 mt-2"
+            data-rw="Kuki Utore Kwa Mugisha?"
+            data-en="Why Choose Us?"
+          >
+            Kuki Utore Kwa Mugisha?
+          </h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="feature-card group">
+            <div
+              class="icon-circle bg-gradient-to-br from-green-400 to-green-600"
+            >
+              <i class="fas fa-tag text-white text-3xl"></i>
+            </div>
+            <h4
+              class="text-2xl font-bold text-gray-800 mb-3"
+              data-rw="Ibiciro byo hasi"
+              data-en="Affordable Prices"
+            >
+              Ibiciro byo hasi
+            </h4>
+            <p
+              class="text-gray-600 leading-relaxed"
+              data-rw="Tuguhiriza ibicuruzwa byiza ku giciro gihagije. Twizeye ko amafaranga yawe agomba kugira agaciro."
+              data-en="We provide quality products at fair prices. We believe your money should have value."
+            >
+              Tuguhiriza ibicuruzwa byiza ku giciro gihagije. Twizeye ko
+              amafaranga yawe agomba kugira agaciro.
+            </p>
+          </div>
+
+          <div class="feature-card group">
+            <div
+              class="icon-circle bg-gradient-to-br from-yellow-400 to-orange-500"
+            >
+              <i class="fas fa-leaf text-white text-3xl"></i>
+            </div>
+            <h4
+              class="text-2xl font-bold text-gray-800 mb-3"
+              data-rw="Ibicuruzwa bishya"
+              data-en="Fresh Products"
+            >
+              Ibicuruzwa bishya
+            </h4>
+            <p
+              class="text-gray-600 leading-relaxed"
+              data-rw="Imbuto n'imboga bishya buri munsi. Tugura ibintu byiza kandi bishya ku baguzi bacu."
+              data-en="Fresh fruits and vegetables every day. We source quality, fresh items for our customers."
+            >
+              Imbuto n'imboga bishya buri munsi. Tugura ibintu byiza kandi
+              bishya ku baguzi bacu.
+            </p>
+          </div>
+
+          <div class="feature-card group">
+            <div
+              class="icon-circle bg-gradient-to-br from-blue-400 to-blue-600"
+            >
+              <i class="fas fa-handshake text-white text-3xl"></i>
+            </div>
+            <h4
+              class="text-2xl font-bold text-gray-800 mb-3"
+              data-rw="Serivisi nziza"
+              data-en="Friendly Service"
+            >
+              Serivisi nziza
+            </h4>
+            <p
+              class="text-gray-600 leading-relaxed"
+              data-rw="Abakozi bacu bakunezereye kandi bakubana neza. Uri umuryango wacu!"
+              data-en="Our staff are friendly and welcoming. You're part of our family!"
+            >
+              Abakozi bacu bakunezereye kandi bakubana neza. Uri umuryango wacu!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section with Better Cards -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <span
+            class="text-green-600 font-semibold text-sm uppercase tracking-wide"
+            data-rw="Hitamo"
+            data-en="Explore"
+            >Hitamo</span
+          >
+          <h3
+            class="text-4xl md:text-5xl font-bold text-gray-800 mt-2"
+            data-rw="Ibicuruzwa Byacu"
+            data-en="Our Products"
+          >
+            Ibicuruzwa Byacu
+          </h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <a href="products.html" class="product-category-card-home group">
+            <div
+              class="category-image-home"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400');
+              "
+            ></div>
+            <div class="category-overlay-home">
+              <h4
+                class="text-2xl font-bold text-white mb-2"
+                data-rw="Imbuto"
+                data-en="Fruits"
+              >
+                Imbuto
+              </h4>
+              <p
+                class="text-white text-sm opacity-90"
+                data-rw="Bishya buri munsi"
+                data-en="Fresh daily"
+              >
+                Bishya buri munsi
+              </p>
+            </div>
+          </a>
+
+          <a href="products.html" class="product-category-card-home group">
+            <div
+              class="category-image-home"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400');
+              "
+            ></div>
+            <div class="category-overlay-home">
+              <h4
+                class="text-2xl font-bold text-white mb-2"
+                data-rw="Imboga"
+                data-en="Vegetables"
+              >
+                Imboga
+              </h4>
+              <p
+                class="text-white text-sm opacity-90"
+                data-rw="Ku giciro cyiza"
+                data-en="Great prices"
+              >
+                Ku giciro cyiza
+              </p>
+            </div>
+          </a>
+
+          <a href="products.html" class="product-category-card-home group">
+            <div
+              class="category-image-home"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400');
+              "
+            ></div>
+            <div class="category-overlay-home">
+              <h4
+                class="text-2xl font-bold text-white mb-2"
+                data-rw="Ibinyobwa"
+                data-en="Beverages"
+              >
+                Ibinyobwa
+              </h4>
+              <p
+                class="text-white text-sm opacity-90"
+                data-rw="Ubwoko bwinshi"
+                data-en="Wide variety"
+              >
+                Ubwoko bwinshi
+              </p>
+            </div>
+          </a>
+
+          <a href="products.html" class="product-category-card-home group">
+            <div
+              class="category-image-home"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400');
+              "
+            ></div>
+            <div class="category-overlay-home">
+              <h4
+                class="text-2xl font-bold text-white mb-2"
+                data-rw="Ibindi"
+                data-en="Essentials"
+              >
+                Ibindi
+              </h4>
+              <p
+                class="text-white text-sm opacity-90"
+                data-rw="Ibikenerwa byose"
+                data-en="Everything you need"
+              >
+                Ibikenerwa byose
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="text-center mt-12">
+          <a href="products.html" class="btn-primary inline-block">
+            <i class="fas fa-arrow-right mr-2"></i>
+            <span data-rw="Reba Byose" data-en="View All Products"
+              >Reba Byose</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section with Better Design -->
+    <section
+      class="py-20 bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white relative overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-0 left-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 right-0 w-96 h-96 bg-green-400 rounded-full blur-3xl"
+        ></div>
+      </div>
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <h3
+          class="text-4xl md:text-5xl font-bold mb-4"
+          data-rw="Turaje Kugukorera!"
+          data-en="Ready to Serve You!"
+        >
+          Turaje Kugukorera!
+        </h3>
+        <p
+          class="text-xl md:text-2xl mb-10 opacity-95"
+          data-rw="Twakiriye abakiriya buri munsi. Tugane wibonere!"
+          data-en="We welcome customers every day. Come see for yourself!"
+        >
+          Twakiriye abakiriya buri munsi. Tugane wibonere!
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="tel:0788899899"
+            class="btn-white inline-flex items-center justify-center"
+          >
+            <i class="fas fa-phone mr-2"></i>
+            <span data-rw="Twakira: 0788 899 899" data-en="Call: 0788 899 899"
+              >Twakira: 0788 899 899</span
+            >
+          </a>
+          <a
+            href="contact.html"
+            class="btn-white inline-flex items-center justify-center"
+          >
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>Kimironko kwa Mushimire</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-shopping-basket text-white text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold">Kwa Mugisha</h4>
+                <p
+                  class="text-sm text-gray-400"
+                  data-rw="Ihahire neza kuri macye"
+                  data-en="Shop well at affordable prices"
+                >
+                  Ihahire neza kuri macye
+                </p>
+              </div>
+            </div>
+            <p
+              class="text-gray-400 leading-relaxed"
+              data-rw="Ibicuruzwa byiza ku giciro cyiza i Kimironko, Kigali."
+              data-en="Quality products at affordable prices in Kimironko, Kigali."
+            >
+              Ibicuruzwa byiza ku giciro cyiza i Kimironko, Kigali.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="text-xl font-bold mb-6"
+              data-rw="Amasumburo"
+              data-en="Quick Links"
+            >
+              Amasumburo
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-green-400 transition-colors"
+                  ><span data-rw="Ahabanza" data-en="Home">Ahabanza</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-green-400 transition-colors"
+                  ><span data-rw="Ibyacu" data-en="About">Ibyacu</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-400 hover:text-green-400 transition-colors"
+                  ><span data-rw="Ibicuruzwa" data-en="Products"
+                    >Ibicuruzwa</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-green-400 transition-colors"
+                  ><span data-rw="Tuvugishe" data-en="Contact"
+                    >Tuvugishe</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-xl font-bold mb-6"
+              data-rw="Amakuru yacu"
+              data-en="Contact Info"
+            >
+              Amakuru yacu
+            </h4>
+            <ul class="space-y-4 text-gray-400">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-green-500 mr-3 mt-1"></i>
+                <span>Kimironko kwa Mushimire, Kigali, Rwanda</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-green-500 mr-3"></i>
+                <a
+                  href="tel:0788899899"
+                  class="hover:text-green-400 transition-colors"
+                  >0788 899 899</a
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-clock text-green-500 mr-3"></i>
+                <span data-rw="Buri munsi: 7AM - 9PM" data-en="Daily: 7AM - 9PM"
+                  >Buri munsi: 7AM - 9PM</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              class="text-xl font-bold mb-6"
+              data-rw="Tukurikire"
+              data-en="Follow Us"
+            >
+              Tukurikire
+            </h4>
+            <div class="flex space-x-3 mb-6">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://wa.me/250788899899" class="social-icon"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+            <p
+              class="text-gray-400 text-sm leading-relaxed"
+              data-rw="Turumvikane kuri social media kubona amakuru mashya n'ibikorwa by'umwihariko."
+              data-en="Stay connected on social media for updates and special offers."
+            >
+              Turumvikane kuri social media kubona amakuru mashya n'ibikorwa
+              by'umwihariko.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2025 Kwa Mugisha.
+            <span
+              data-rw="Uburenganzira bwose buhagaritswe."
+              data-en="All rights reserved."
+              >Uburenganzira bwose buhagaritswe.</span
+            >
+            <span
+              data-rw="Byakozwe n'urukundo rwa Kigali."
+              data-en="Designed with love for Kigali."
+              >Byakozwe n'urukundo rwa Kigali.</span
+            >
+            <i class="fas fa-heart text-red-500"></i>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

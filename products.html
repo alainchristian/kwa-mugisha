@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our selection of fresh fruits, vegetables, beverages, and household essentials at Kwa Mugisha, Kimironko.">
+    <meta name="keywords" content="grocery products, fresh produce, fruits, vegetables, Kigali, Rwanda">
+    <title>Products - Kwa Mugisha | Ibicuruzwa</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans">
+    <!-- Navigation Bar --><nav class="bg-white shadow-lg fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center shadow-md">
+                        <i class="fas fa-shopping-basket text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-green-700">Kwa Mugisha</h1>
+                        <p class="text-xs text-gray-600 font-medium" data-rw="Ihahire neza kuri macye" data-en="Shop well at affordable prices">Ihahire neza kuri macye</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">
+                        <span data-rw="Ahabanza" data-en="Home">Ahabanza</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span data-rw="Ibyacu" data-en="About">Ibyacu</span>
+                    </a>
+                    <a href="products.html" class="nav-link active">
+                        <span data-rw="Ibicuruzwa" data-en="Products">Ibicuruzwa</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span data-rw="Tuvugishe" data-en="Contact">Tuvugishe</span>
+                    </a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center bg-gray-100 rounded-full p-1">
+                        <button id="lang-rw" class="lang-btn active px-3 py-1 rounded-full text-sm font-semibold transition-all">RW</button>
+                        <button id="lang-en" class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all">EN</button>
+                    </div>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t pt-4">
+                <a href="index.html" class="block py-3 text-gray-700 hover:text-green-600">
+                    <span data-rw="Ahabanza" data-en="Home">Ahabanza</span>
+                </a>
+                <a href="about.html" class="block py-3 text-gray-700 hover:text-green-600">
+                    <span data-rw="Ibyacu" data-en="About">Ibyacu</span>
+                </a>
+                <a href="products.html" class="block py-3 text-green-600 font-semibold">
+                    <span data-rw="Ibicuruzwa" data-en="Products">Ibicuruzwa</span>
+                </a>
+                <a href="contact.html" class="block py-3 text-gray-700 hover:text-green-600">
+                    <span data-rw="Tuvugishe" data-en="Contact">Tuvugishe</span>
+                </a>
+                
+                <div class="flex items-center space-x-2 mt-4">
+                    <span class="text-sm text-gray-600" data-rw="Ururimi:" data-en="Language:">Ururimi:</span>
+                    <button class="mobile-lang-btn active px-3 py-1 bg-green-600 text-white rounded-full text-sm" data-lang="rw">RW</button>
+                    <button class="mobile-lang-btn px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header pt-32 pb-20 bg-gradient-to-r from-green-600 via-green-700 to-green-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center text-white relative z-10">
+            <h2 class="text-5xl md:text-6xl font-bold mb-4" data-rw="Ibicuruzwa Byacu" data-en="Our Products">Ibicuruzwa Byacu</h2>
+            <p class="text-xl opacity-90" data-rw="Bishya, byiza kandi ku giciro cyiza" data-en="Fresh, quality, and affordable">Bishya, byiza kandi ku giciro cyiza</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="py-8 bg-white sticky top-20 z-40 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                <!-- Search Bar -->
+                <div class="relative w-full md:w-96">
+                    <input type="text" id="search-bar" placeholder="Shakisha..." data-placeholder-rw="Shakisha..." data-placeholder-en="Search products..."
+                           class="w-full px-6 py-3 border-2 border-gray-300 rounded-full focus:outline-none focus:border-green-500 pr-12 transition-all">
+                    <button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-green-600">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-2 justify-center md:justify-end">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fas fa-th mr-2"></i>
+                        <span data-rw="Byose" data-en="All">Byose</span>
+                    </button>
+                    <button class="filter-btn" data-category="fruits">
+                        <i class="fas fa-apple-alt mr-2"></i>
+                        <span data-rw="Imbuto" data-en="Fruits">Imbuto</span>
+                    </button>
+                    <button class="filter-btn" data-category="vegetables">
+                        <i class="fas fa-carrot mr-2"></i>
+                        <span data-rw="Imboga" data-en="Vegetables">Imboga</span>
+                    </button>
+                    <button class="filter-btn" data-category="beverages">
+                        <i class="fas fa-coffee mr-2"></i>
+                        <span data-rw="Ibinyobwa" data-en="Beverages">Ibinyobwa</span>
+                    </button>
+                    <button class="filter-btn" data-category="essentials">
+                        <i class="fas fa-box mr-2"></i>
+                        <span data-rw="Ibindi" data-en="Essentials">Ibindi</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-green-50">
+        <div class="container mx-auto px-4">
+            <!-- Products Count -->
+            <div class="mb-8 text-center">
+                <p class="text-gray-600 text-lg">
+                    <span data-rw="Byerekana" data-en="Showing">Byerekana</span>
+                    <span id="product-count" class="font-bold text-green-600">24</span>
+                    <span data-rw="ibicuruzwa" data-en="products">ibicuruzwa</span>
+                </p>
+            </div>
+            
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <!-- FRUITS -->
+                <div class="product-card" data-category="fruits" data-name="tomatoes" data-name-rw="ibinyomoro" data-name-en="tomatoes">
+                    <div class="product-badge" data-rw="Bishya" data-en="Fresh">Bishya</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ibinyomoro" data-en="Tomatoes">Ibinyomoro</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Bishya buri munsi" data-en="Fresh daily">Bishya buri munsi</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">500 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn" title="Add to cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fruits" data-name="avocado" data-name-rw="iki" data-name-en="avocado">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Iki" data-en="Avocado">Iki</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Byiza cyane" data-en="Premium quality">Byiza cyane</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">300 RWF<span class="text-sm font-normal text-gray-600">/pc</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fruits" data-name="bananas" data-name-rw="amasaka" data-name-en="bananas">
+                    <div class="product-badge" data-rw="Umusaruro mushya" data-en="New harvest">Umusaruro mushya</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Amasaka" data-en="Bananas">Amasaka</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Biryoshye kandi biryoshye" data-en="Sweet and ripe">Biryoshye kandi biryoshye</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">1,500 RWF<span class="text-sm font-normal text-gray-600">/igice</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fruits" data-name="lemons" data-name-rw="indimu" data-name-en="lemons">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Indimu" data-en="Lemons">Indimu</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Nziza kandi nyiza" data-en="Fresh and juicy">Nziza kandi nyiza</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">200 RWF<span class="text-sm font-normal text-gray-600">/pc</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VEGETABLES -->
+                <div class="product-card" data-category="vegetables" data-name="onions" data-name-rw="ibitunguru" data-name-en="onions">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ibitunguru" data-en="Onions">Ibitunguru</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Byiza kandi bikomeye" data-en="Quality and strong">Byiza kandi bikomeye</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">800 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables" data-name="carrots" data-name-rw="karoti" data-name-en="carrots">
+                    <div class="product-badge" data-rw="Bishya" data-en="Fresh">Bishya</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1447175008436-054170c2e979?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Karoti" data-en="Carrots">Karoti</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Nziza kandi nyoroshye" data-en="Fresh and crunchy">Nziza kandi nyoroshye</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">600 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables" data-name="spinach" data-name-rw="ishu" data-name-en="spinach">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ishu" data-en="Spinach">Ishu</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Icyatsi gitoshye cyiza" data-en="Fresh green leaves">Icyatsi gitoshye cyiza</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">400 RWF<span class="text-sm font-normal text-gray-600">/igice</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables" data-name="cassava" data-name-rw="inzungu" data-name-en="cassava">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1585200956650-33e1cf79fdea?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Inzungu" data-en="Cassava">Inzungu</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Nziza kandi nshya" data-en="Fresh quality">Nziza kandi nshya</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">700 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables" data-name="cabbage" data-name-rw="ishu y'umunyu" data-name-en="cabbage">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ishu y'umunyu" data-en="Cabbage">Ishu y'umunyu</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Nini kandi nziza" data-en="Large and fresh">Nini kandi nziza</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">500 RWF<span class="text-sm font-normal text-gray-600">/pc</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables" data-name="potatoes" data-name-rw="ibirayi" data-name-en="potatoes">
+                    <div class="product-badge" data-rw="Umusaruro mushya" data-en="New harvest">Umusaruro mushya</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ibirayi" data-en="Potatoes">Ibirayi</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Byiza ku karyamunsi" data-en="Perfect for cooking">Byiza ku karyamunsi</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">900 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BEVERAGES -->
+                <div class="product-card" data-category="beverages" data-name="coffee" data-name-rw="ikawa" data-name-en="coffee">
+                    <div class="product-badge" data-rw="Rwanda Coffee" data-en="Rwanda Coffee">Rwanda</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ikawa" data-en="Coffee">Ikawa</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Ikawa nziza ya Rwanda" data-en="Premium Rwanda coffee">Ikawa nziza ya Rwanda</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">3,000 RWF<span class="text-sm font-normal text-gray-600">/pack</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="beverages" data-name="tea" data-name-rw="icyayi" data-name-en="tea">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Icyayi" data-en="Tea">Icyayi</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Icyayi cyiza cya Rwanda" data-en="Quality Rwanda tea">Icyayi cyiza cya Rwanda</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">2,500 RWF<span class="text-sm font-normal text-gray-600">/pack</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="beverages" data-name="water" data-name-rw="amazi" data-name-en="water">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Amazi" data-en="Water">Amazi</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Amazi meza yo kunywa" data-en="Pure drinking water">Amazi meza yo kunywa</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">500 RWF<span class="text-sm font-normal text-gray-600">/bottle</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="beverages" data-name="juice" data-name-rw="umutobe" data-name-en="juice">
+                    <div class="product-badge" data-rw="Bishya" data-en="Fresh">Bishya</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Umutobe" data-en="Juice">Umutobe</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Umutobe w'imbuto bishya" data-en="Fresh fruit juice">Umutobe w'imbuto bishya</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">1,000 RWF<span class="text-sm font-normal text-gray-600">/bottle</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="beverages" data-name="soda" data-name-rw="soda" data-en="soda">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Soda" data-en="Soda">Soda</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Ibinyobwa bitandukanye" data-en="Various soft drinks">Ibinyobwa bitandukanye</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">800 RWF<span class="text-sm font-normal text-gray-600">/bottle</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="beverages" data-name="milk" data-name-rw="amata" data-name-en="milk">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Amata" data-en="Milk">Amata</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Amata meza kandi mashya" data-en="Fresh quality milk">Amata meza kandi mashya</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">1,200 RWF<span class="text-sm font-normal text-gray-600">/L</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ESSENTIALS -->
+                <div class="product-card" data-category="essentials" data-name="rice" data-name-rw="umuceri" data-name-en="rice">
+                    <div class="product-badge" data-rw="Byiza" data-en="Premium">Byiza</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Umuceri" data-en="Rice">Umuceri</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Umuceri mwiza cyane" data-en="Premium quality rice">Umuceri mwiza cyane</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">1,200 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="essentials" data-name="beans" data-name-rw="ibiharage" data-name-en="beans">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ibiharage" data-en="Beans">Ibiharage</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Ibiharage byumye neza" data-en="Quality dry beans">Ibiharage byumye neza</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">900 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="essentials" data-name="oil" data-name-rw="amavuta" data-name-en="cooking oil">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Amavuta" data-en="Cooking Oil">Amavuta</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Amavuta meza yo guteka" data-en="Quality cooking oil">Amavuta meza yo guteka</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">5,000 RWF<span class="text-sm font-normal text-gray-600">/2L</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="essentials" data-name="soap" data-name-rw="sabuni" data-name-en="soap">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1600857062241-98e5dba60f2f?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Sabuni" data-en="Soap">Sabuni</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Sabuni yo kwoza n'iyisuku" data-en="Laundry & bathing soap">Sabuni yo kwoza n'iyisuku</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">800 RWF<span class="text-sm font-normal text-gray-600">/pc</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="essentials" data-name="salt" data-name-rw="umunyu" data-name-en="salt">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1563127999-f9a8d18b2e8d?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Umunyu" data-en="Salt">Umunyu</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Umunyu wo guteka" data-en="Table salt">Umunyu wo guteka</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">300 RWF<span class="text-sm font-normal text-gray-600">/pack</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="essentials" data-name="sugar" data-name-rw="isukari" data-name-en="sugar">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1593538307418-eb5d1185efe8?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Isukari" data-en="Sugar">Isukari</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Isukari yera" data-en="White sugar">Isukari yera</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">1,500 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="essentials" data-name="flour" data-name-rw="ifu" data-name-en="flour">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1610896923520-ffc4de2a76ed?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ifu" data-en="Flour">Ifu</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Ifu ry'ingano" data-en="Wheat flour">Ifu ry'ingano</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">1,000 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="essentials" data-name="maize" data-name-rw="ibigori" data-name-en="maize">
+                    <div class="product-badge" data-rw="Umusaruro mushya" data-en="New harvest">Umusaruro mushya</div>
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1603048297172-c92544798d5e?w=400');"></div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2" data-rw="Ibigori" data-en="Maize">Ibigori</h4>
+                        <p class="text-sm text-gray-600 mb-4" data-rw="Ibigori byumye neza" data-en="Quality dry maize">Ibigori byumye neza</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-600 font-bold text-2xl">850 RWF<span class="text-sm font-normal text-gray-600">/kg</span></span>
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-16">
+                <i class="fas fa-search text-gray-300 text-6xl mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-700 mb-2" data-rw="Nta cyo waboye" data-en="No products found">Nta cyo waboye</h3>
+                <p class="text-gray-600" data-rw="Gerageza gushakisha ikindi kintu cyangwa uhitemo indi category" data-en="Try searching for something else or select a different category">Gerageza gushakisha ikindi kintu cyangwa uhitemo indi category</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-green-600 to-green-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-4" data-rw="Ufite Ikibazo?" data-en="Have Questions?">Ufite Ikibazo?</h3>
+            <p class="text-xl mb-8" data-rw="Tuvugishe ku bijyanye n'ibicuruzwa n'ibyiciro byinshi" data-en="Contact us for product availability and bulk orders">Tuvugishe ku bijyanye n'ibicuruzwa n'ibyiciro byinshi</p>
+            <a href="contact.html" class="btn-white inline-block">
+                <i class="fas fa-phone mr-2"></i>
+                <span data-rw="Tuvugishe" data-en="Contact Us">Tuvugishe</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shopping-basket text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">Kwa Mugisha</h4>
+                            <p class="text-sm text-gray-400" data-rw="Ihahire neza kuri macye" data-en="Shop well at affordable prices">Ihahire neza kuri macye</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed" data-rw="Ibicuruzwa byiza ku giciro cyiza i Kimironko, Kigali." data-en="Quality products at affordable prices in Kimironko, Kigali.">
+                        Ibicuruzwa byiza ku giciro cyiza i Kimironko, Kigali.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6" data-rw="Amasumburo" data-en="Quick Links">Amasumburo</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-green-400 transition-colors"><span data-rw="Ahabanza" data-en="Home">Ahabanza</span></a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><span data-rw="Ibyacu" data-en="About">Ibyacu</span></a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-green-400 transition-colors"><span data-rw="Ibicuruzwa" data-en="Products">Ibicuruzwa</span></a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-400 transition-colors"><span data-rw="Tuvugishe" data-en="Contact">Tuvugishe</span></a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6" data-rw="Amakuru yacu" data-en="Contact Info">Amakuru yacu</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-green-500 mr-3 mt-1"></i>
+                            <span>Kimironko kwa Mushimire, Kigali</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-green-500 mr-3"></i>
+                            <a href="tel:0788899899" class="hover:text-green-400 transition-colors">0788 899 899</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-green-500 mr-3"></i>
+                            <span data-rw="Buri munsi: 7AM - 9PM" data-en="Daily: 7AM - 9PM">Buri munsi: 7AM - 9PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-6" data-rw="Tukurikire" data-en="Follow Us">Tukurikire</h4>
+                    <div class="flex space-x-3 mb-6">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/250788899899" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-rw="Turumvikane kuri social media kubona amakuru mashya." data-en="Stay connected on social media for updates.">
+                        Turumvikane kuri social media kubona amakuru mashya.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Kwa Mugisha. <span data-rw="Uburenganzira bwose buhagaritswe." data-en="All rights reserved.">Uburenganzira bwose buhagaritswe.</span> <i class="fas fa-heart text-red-500"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
